@@ -1,0 +1,715 @@
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#080f20">
+<meta name="description" content="Portafolio digital de mis aprendizajes del tercer parcial de M4S1.">
+
+<title>M4S1 | Mi portafolio digital</title>
+
+<style>
+
+
+/* ===== EFECTO NEÓN EN LAS LETRAS ===== */
+
+/* Títulos principales */
+header h1 {
+    color: #ffffff;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #67e8f9,
+        0 0 20px #22d3ee,
+        0 0 40px #0891b2,
+        0 0 70px #0284c7;
+}
+
+/* Subtítulo del encabezado */
+header .descripcion {
+    color: #e0faff;
+    text-shadow:
+        0 0 5px #38bdf8,
+        0 0 12px #0284c7;
+}
+
+/* Etiqueta superior */
+header .etiqueta {
+    color: #a5f3fc;
+    text-shadow:
+        0 0 5px #22d3ee,
+        0 0 12px #0891b2;
+    box-shadow:
+        0 0 8px #22d3ee55,
+        inset 0 0 8px #22d3ee22;
+}
+
+/* Títulos de los cinco apartados */
+.apartado h2 {
+    color: #67e8f9;
+    text-shadow:
+        0 0 5px #22d3ee,
+        0 0 12px #06b6d4,
+        0 0 24px #0891b2;
+}
+
+/* Texto de los apartados */
+.apartado p {
+    color: #f0f9ff;
+    text-shadow:
+        0 0 3px #38bdf855,
+        0 0 8px #0284c733;
+}
+
+/* Botones con letras luminosas */
+.boton-enlace {
+    color: #ffffff;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #67e8f9,
+        0 0 18px #22d3ee;
+}
+
+/* Pie de página */
+footer h3 {
+    color: #67e8f9;
+    text-shadow:
+        0 0 5px #22d3ee,
+        0 0 15px #06b6d4,
+        0 0 30px #0284c7;
+}
+
+footer p {
+    color: #cffafe;
+    text-shadow:
+        0 0 5px #22d3ee88;
+}
+
+/* Lápiz luminoso */
+#lapiz {
+    filter:
+        drop-shadow(0 0 5px #00eaff)
+        drop-shadow(0 0 12px #008cff);
+}
+
+
+
+
+
+
+/* ===== CONFIGURACIÓN GENERAL ===== */
+:root {
+    --fondo: #080f20;
+    --cian: #67e8f9;
+    --azul: #38bdf8;
+    --borde: rgba(103, 232, 249, 0.23);
+    --texto: #dbe5f5;
+    --texto-secundario: #a9bdd7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 28px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: white;
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(14, 165, 233, 0.17),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            #080f20,
+            #101c35 55%,
+            #080f20
+        );
+    background-attachment: fixed;
+}
+
+/* ===== ENCABEZADO ===== */
+header {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 48px 20px;
+    margin-bottom: 38px;
+    background: linear-gradient(
+        120deg,
+        #0c4a6e,
+        #075985 55%,
+        #164e63
+    );
+    border: 1px solid rgba(103, 232, 249, 0.4);
+    border-radius: 24px;
+    box-shadow: 0 15px 45px #0005;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    top: -140px;
+    right: -60px;
+    background: rgba(103, 232, 249, 0.12);
+    border-radius: 50%;
+    filter: blur(10px);
+    pointer-events: none;
+}
+
+header .etiqueta {
+    display: inline-block;
+    position: relative;
+    margin: 0 0 16px;
+    padding: 8px 14px;
+    border: 1px solid #67e8f966;
+    border-radius: 30px;
+    background: #082f493d;
+    color: #a5f3fc;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+header h1 {
+    position: relative;
+    margin: 0 0 12px;
+    font-size: clamp(42px, 7vw, 66px);
+    font-weight: 800;
+    letter-spacing: 5px;
+    text-shadow: 0 0 24px #38bdf855;
+}
+
+.linea-decorativa {
+    width: 85px;
+    height: 4px;
+    margin: 22px auto;
+    border-radius: 20px;
+    background: var(--cian);
+    box-shadow: 0 0 18px #67e8f9a0;
+}
+
+header .descripcion {
+    max-width: 560px;
+    margin: 0 auto;
+    color: #dbeafe;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ===== CONTENIDO ===== */
+main {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+/* ===== APARTADOS ===== */
+.apartado {
+    position: relative;
+    overflow: hidden;
+    padding: 30px;
+    margin: 28px auto;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.055),
+        rgba(255, 255, 255, 0.018)
+    );
+    border: 1px solid var(--borde);
+    border-radius: 22px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(12px);
+    animation: aparecer 0.7s ease both;
+}
+
+.apartado:nth-child(2) {
+    animation-delay: 0.08s;
+}
+
+.apartado:nth-child(3) {
+    animation-delay: 0.16s;
+}
+
+.apartado:nth-child(4) {
+    animation-delay: 0.24s;
+}
+
+.apartado:nth-child(5) {
+    animation-delay: 0.32s;
+}
+
+.apartado h2 {
+    color: var(--cian);
+    font-size: clamp(21px, 3vw, 27px);
+    line-height: 1.4;
+    border: none;
+    border-left: 4px solid var(--cian);
+    padding: 2px 0 2px 15px;
+    margin: 0 0 20px;
+    text-shadow: none;
+}
+
+.apartado p {
+    color: var(--texto);
+    font-size: 16.5px;
+    line-height: 1.85;
+    margin: 12px 0;
+}
+
+/* ===== GALERÍA ===== */
+.imagenes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 24px;
+    margin-top: 26px;
+}
+
+.imagenes img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+    object-position: center;
+    padding: 5px;
+    background: #080f20;
+    border: 1px solid rgba(103, 232, 249, 0.35);
+    border-radius: 17px;
+    box-shadow: 0 10px 25px #0004;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .imagenes img:hover {
+        transform: translateY(-5px);
+        border-color: var(--cian);
+        box-shadow:
+            0 14px 35px #0005,
+            0 0 18px #22d3ee20;
+    }
+
+    .apartado:hover {
+        border-color: rgba(103, 232, 249, 0.4);
+    }
+}
+
+/* ===== VIDEOS ===== */
+.video-contenedor {
+    width: 100%;
+    max-width: 720px;
+    margin: 30px auto 5px;
+}
+
+.video-contenedor video {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 75vh;
+    margin: 0 auto;
+    border: 1px solid var(--borde);
+    border-radius: 18px;
+    background: #000;
+    box-shadow: 0 12px 30px #0005;
+}
+
+/* ===== BOTONES ===== */
+.boton-enlace {
+    display: inline-block;
+    max-width: 100%;
+    margin-top: 18px;
+    padding: 14px 24px;
+    border: 1px solid #67e8f955;
+    border-radius: 12px;
+    background: linear-gradient(110deg, #0891b2, #2563eb);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    box-shadow: 0 6px 18px #0284c733;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .boton-enlace:hover {
+        transform: translateY(-3px);
+        filter: brightness(1.1);
+        box-shadow: 0 10px 25px #0284c755;
+    }
+}
+
+a:focus-visible {
+    outline: 3px solid var(--cian);
+    outline-offset: 4px;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+footer {
+    max-width: 1150px;
+    margin: 45px auto 0;
+    padding: 32px 20px;
+    text-align: center;
+    background: rgba(7, 21, 44, 0.8);
+    border: 1px solid var(--borde);
+    border-radius: 20px;
+    color: var(--cian);
+    box-shadow: 0 10px 30px #0003;
+}
+
+footer h3 {
+    margin: 0 0 12px;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+footer p {
+    margin: 0;
+    color: var(--texto-secundario);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ===== LÁPIZ PERSONALIZADO ===== */
+#lapiz {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    line-height: 1;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(8px, 8px) rotate(-35deg);
+    filter: drop-shadow(0 0 6px #00eaff);
+    display: block;
+    will-change: left, top;
+}
+
+/* ===== TABLET Y CELULAR ===== */
+@media (max-width: 700px) {
+    body {
+        padding: 12px;
+        background-attachment: scroll;
+    }
+
+    header {
+        padding: 35px 16px;
+        margin-bottom: 24px;
+        border-radius: 19px;
+    }
+
+    header h1 {
+        letter-spacing: 3px;
+    }
+
+    header .descripcion {
+        font-size: 15px;
+    }
+
+    .apartado {
+        padding: 21px 16px;
+        margin: 18px auto;
+        border-radius: 18px;
+    }
+
+    .apartado p {
+        font-size: 16px;
+        line-height: 1.8;
+        text-align: left;
+    }
+
+    .imagenes {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 20px;
+    }
+
+    .imagenes img {
+        width: 100%;
+        max-height: 70vh;
+    }
+
+    .video-contenedor {
+        max-width: 100%;
+        margin-top: 24px;
+    }
+
+    .boton-enlace {
+        padding: 13px 19px;
+    }
+
+    footer {
+        margin-top: 30px;
+        padding: 27px 15px;
+    }
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== ACCESIBILIDAD ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Lápiz que sigue el dedo o el mouse -->
+<div id="lapiz" aria-hidden="true">✏️</div>
+
+<!-- ===== ENCABEZADO ===== -->
+<header>
+    <p class="etiqueta">PORTAFOLIO DIGITAL · TERCER PARCIAL</p>
+
+    <h1>M4S1</h1>
+
+    <div class="linea-decorativa"></div>
+
+    <p class="descripcion">
+        Mi página web de todos mis aprendizajes del tercer parcial.
+        Un recorrido por mis proyectos, prácticas y experiencias.
+    </p>
+</header>
+
+<main>
+
+    <!-- ===== APARTADO 1 ===== -->
+    <section class="apartado">
+        <h2>01. Formulario Jóvenes Exitosos</h2>
+
+        <p>
+            Aprendimos a crear un documento HTML para diseñar un
+            formulario sobre los jóvenes exitosos, explorar este
+            tema y realizar una encuesta.
+        </p>
+
+        <div class="imagenes">
+            <img
+                src="form1.jpg"
+                alt="Formulario de Jóvenes Exitosos, primera imagen"
+                loading="lazy"
+            >
+
+            <img
+                src="form2.jpg"
+                alt="Formulario de Jóvenes Exitosos, segunda imagen"
+                loading="lazy"
+            >
+        </div>
+    </section>
+
+    <!-- ===== APARTADO 2 ===== -->
+    <section class="apartado">
+        <h2>02. Formulario de clase</h2>
+
+        <p>
+            Hicimos otro formulario para explorar temas vistos en
+            clase. Los formularios son herramientas útiles porque
+            permiten recopilar información de manera organizada.
+        </p>
+
+        <div class="imagenes">
+            <img
+                src="clas1.jpg"
+                alt="Formulario de clase, primera imagen"
+                loading="lazy"
+            >
+
+            <img
+                src="clas2.jpg"
+                alt="Formulario de clase, segunda imagen"
+                loading="lazy"
+            >
+        </div>
+
+        <a
+            class="boton-enlace"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfs3xycvc4BwSvMb2cplw1kcH4Z07TQmpTLDIJgdYRceO2eCQ/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Ver formulario ↗
+        </a>
+    </section>
+
+    <!-- ===== APARTADO 3 ===== -->
+    <section class="apartado">
+        <h2>03. Carta navideña</h2>
+
+        <p>
+            Creamos una carta navideña utilizando HTML mediante
+            un sorteo. Con esta actividad aprendimos a incorporar
+            elementos temáticos y creativos a nuestras páginas web.
+        </p>
+
+        <div class="imagenes">
+            <img
+                src="adrian1.png"
+                alt="Carta navideña, primera imagen"
+                loading="lazy"
+            >
+
+            <img
+                src="adrian2.png"
+                alt="Carta navideña, segunda imagen"
+                loading="lazy"
+            >
+        </div>
+
+        <div class="video-contenedor">
+            <video
+                controls
+                preload="metadata"
+                playsinline
+                aria-label="Video de la carta navideña"
+            >
+                <source src="adrian.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </div>
+    </section>
+
+    <!-- ===== APARTADO 4 ===== -->
+    <section class="apartado">
+        <h2>04. Carta de Navidad 2</h2>
+
+        <p>
+            Las cartas navideñas nos permitieron explorar nuevas
+            posibilidades para nuestras páginas web y convivir
+            con nuestros compañeros mediante la actividad del
+            amigo secreto.
+        </p>
+
+        <div class="imagenes">
+            <img
+                src="luis1.jpg"
+                alt="Segunda carta navideña, primera imagen"
+                loading="lazy"
+            >
+
+            <img
+                src="luis2.jpg"
+                alt="Segunda carta navideña, segunda imagen"
+                loading="lazy"
+            >
+        </div>
+    </section>
+
+    <!-- ===== APARTADO 5 ===== -->
+    <section class="apartado">
+        <h2>05. App de App Inventor</h2>
+
+        <p>
+            Desarrollamos un videojuego de carreras en el que
+            competimos contra un oponente controlado por un robot.
+            El objetivo es avanzar por la pista y superar al rival.
+        </p>
+
+        <div class="imagenes">
+            <img
+                src="carrera.jpg"
+                alt="Captura del videojuego de carreras"
+                loading="lazy"
+            >
+        </div>
+
+        <div class="video-contenedor">
+            <video
+                controls
+                preload="metadata"
+                playsinline
+                aria-label="Video del videojuego de carreras"
+            >
+                <source src="carrera.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </div>
+
+        <a class="boton-enlace" href="carreras.apk" download>
+            Descargar APK ↓
+        </a>
+    </section>
+
+</main>
+
+<!-- ===== PIE DE PÁGINA ===== -->
+<footer>
+    <h3>FIN DE LA INFORMACIÓN</h3>
+
+    <p>
+        Portafolio digital elaborado con HTML y CSS.
+        <br>
+        M4S1 · Aprendizajes del tercer parcial.
+    </p>
+</footer>
+
+<!-- ===== FUNCIONAMIENTO DEL LÁPIZ ===== -->
+<script>
+(() => {
+    const lapiz = document.getElementById("lapiz");
+
+    if (!lapiz) return;
+
+    // Mantener el lápiz en la posición del último movimiento.
+    function moverLapiz(e) {
+        lapiz.style.left = e.clientX + "px";
+        lapiz.style.top = e.clientY + "px";
+        lapiz.style.display = "block";
+    }
+
+    // Funciona con mouse, dedo y lápiz táctil compatible.
+    document.addEventListener("pointermove", moverLapiz, {
+        passive: true
+    });
+
+    document.addEventListener("pointerdown", moverLapiz, {
+        passive: true
+    });
+
+    // No se oculta al levantar el dedo:
+    // permanece en la última posición registrada.
+})();
+</script>
+
+</body>
+</html>
