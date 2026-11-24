@@ -1,12 +1,13 @@
 
 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#080f20">
-<meta name="description" content="Portafolio digital de mis aprendizajes de M4S1, Desarrollo de Aplicaciones Web, proyecto transversal de Inglés y jardines polinizadores.">
+<meta name="description" content="Portafolio digital de mis aprendizajes de M4S1, Desarrollo de Aplicaciones Web, proyecto transversal de Inglés, jardines polinizadores y tecnología.">
 
 <title>M4S1 | Mi portafolio digital</title>
 
@@ -20,7 +21,9 @@
     --texto-secundario: #a9bdd7;
 }
 
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 html {
     scroll-behavior: smooth;
@@ -93,7 +96,7 @@ header h1 {
         0 0 20px #22d3ee, 0 0 40px #0891b2, 0 0 70px #0284c7;
 }
 
-/* NUEVO: SUBTÍTULO */
+/* ===== SUBTÍTULO ===== */
 .subtitulo {
     position: relative;
     margin: 0;
@@ -244,6 +247,7 @@ main {
     box-shadow: 0 12px 30px #0005;
 }
 
+/* ===== TARJETAS MULTIMEDIA ===== */
 .multimedia-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -263,6 +267,7 @@ main {
     margin: 0 0 12px;
     color: var(--cian);
     font-size: 18px;
+    line-height: 1.5;
     text-shadow: 0 0 8px #0891b2;
 }
 
@@ -310,7 +315,7 @@ a:focus-visible {
     outline-offset: 4px;
 }
 
-/* ===== NUEVO: JARDÍN POLINIZADOR ===== */
+/* ===== JARDINES POLINIZADORES ===== */
 .jardin-destacado {
     border-color: rgba(103,232,249,.5);
     background:
@@ -324,8 +329,19 @@ a:focus-visible {
     text-shadow: 0 0 7px #22d3ee, 0 0 17px #0891b2;
 }
 
-.jardin-destacado .boton-enlace {
-    margin-top: 20px;
+/* ===== NOTICIAS ===== */
+.noticia-tarjeta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.noticia-tarjeta strong {
+    color: var(--cian);
+}
+
+.noticia-tarjeta p {
+    overflow-wrap: anywhere;
 }
 
 /* ===== PIE DE PÁGINA ===== */
@@ -386,9 +402,17 @@ footer p {
         border-radius: 19px;
     }
 
-    header h1 { letter-spacing: 3px; }
-    header .descripcion { font-size: 15px; }
-    .subtitulo { line-height: 1.5; }
+    header h1 {
+        letter-spacing: 3px;
+    }
+
+    header .descripcion {
+        font-size: 15px;
+    }
+
+    .subtitulo {
+        line-height: 1.5;
+    }
 
     .apartado {
         padding: 21px 16px;
@@ -409,26 +433,45 @@ footer p {
         margin-top: 20px;
     }
 
-    .imagenes img { max-height: 70vh; }
-    .video-contenedor { max-width: 100%; margin-top: 24px; }
-    .boton-enlace { padding: 13px 19px; }
+    .imagenes img {
+        max-height: 70vh;
+    }
+
+    .video-contenedor {
+        max-width: 100%;
+        margin-top: 24px;
+    }
+
+    .boton-enlace {
+        padding: 13px 19px;
+    }
 
     footer {
         margin-top: 30px;
         padding: 27px 15px;
     }
 
-    #lapiz { display: none; }
+    #lapiz {
+        display: none;
+    }
 }
 
 /* ===== ANIMACIONES ===== */
 @keyframes aparecer {
-    from { opacity: 0; transform: translateY(18px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
         scroll-behavior: auto !important;
         animation: none !important;
         transition: none !important;
@@ -441,11 +484,12 @@ footer p {
 
 <div id="lapiz" aria-hidden="true">✏️</div>
 
+<!-- ===== ENCABEZADO ===== -->
 <header>
     <p class="etiqueta">PORTAFOLIO DIGITAL · TERCER PARCIAL</p>
+
     <h1>M4S1</h1>
 
-    <!-- NUEVO SUBTÍTULO -->
     <p class="subtitulo">Desarrollo de Aplicaciones Web</p>
 
     <div class="linea-decorativa"></div>
@@ -461,50 +505,102 @@ footer p {
     <!-- ===== APARTADO 1 ===== -->
     <section class="apartado">
         <h2>01. Formulario Jóvenes Exitosos</h2>
+
         <p>
             Aprendimos a crear un documento HTML para diseñar un
             formulario sobre los jóvenes exitosos, explorar este
             tema y realizar una encuesta.
         </p>
+
         <div class="imagenes">
-            <img src="form1.jpg" alt="Formulario de Jóvenes Exitosos, primera imagen" loading="lazy">
-            <img src="form2.jpg" alt="Formulario de Jóvenes Exitosos, segunda imagen" loading="lazy">
+            <img src="form1.jpg"
+                 alt="Formulario de Jóvenes Exitosos, primera imagen"
+                 loading="lazy">
+
+            <img src="form2.jpg"
+                 alt="Formulario de Jóvenes Exitosos, segunda imagen"
+                 loading="lazy">
         </div>
     </section>
 
     <!-- ===== APARTADO 2 ===== -->
     <section class="apartado">
         <h2>02. Formulario de clase</h2>
+
         <p>
             Hicimos otro formulario para explorar temas vistos en
             clase. Los formularios permiten recopilar información
             de manera organizada.
         </p>
+
         <div class="imagenes">
-            <img src="clas1.jpg" alt="Formulario de clase, primera imagen" loading="lazy">
-            <img src="clas2.jpg" alt="Formulario de clase, segunda imagen" loading="lazy">
+            <img src="clas1.jpg"
+                 alt="Formulario de clase, primera imagen"
+                 loading="lazy">
+
+            <img src="clas2.jpg"
+                 alt="Formulario de clase, segunda imagen"
+                 loading="lazy">
         </div>
+
         <a class="boton-enlace"
            href="https://docs.google.com/forms/d/e/1FAIpQLSfs3xycvc4BwSvMb2cplw1kcH4Z07TQmpTLDIJgdYRceO2eCQ/viewform?usp=publish-editor"
-           target="_blank" rel="noopener noreferrer">
+           target="_blank"
+           rel="noopener noreferrer">
             Ver formulario ↗
+        </a>
+    </section>
+
+    <!-- ===== ACTIVIDAD: SORTEO NAVIDEÑO ===== -->
+    <section class="apartado">
+        <h2>🎄 Actividad: Sorteo navideño y amigo secreto</h2>
+
+        <p>
+            En esta actividad participamos en un sorteo navideño
+            para descubrir a qué compañero nos tocó darle una
+            tarjeta. Aprendimos a utilizar una herramienta digital
+            para organizar el sorteo y conocer a la persona a quien
+            debíamos dedicar nuestra tarjeta.
+        </p>
+
+        <p>
+            Esta experiencia nos ayudó a practicar la creatividad,
+            la organización y la convivencia con nuestros compañeros.
+            También aprendimos cómo la tecnología puede facilitar
+            actividades escolares y hacerlas más dinámicas.
+        </p>
+
+        <a class="boton-enlace"
+           href="https://app-sorteos.com/es/amigo-secreto-online/SV6v51hJVsmF/join"
+           target="_blank"
+           rel="noopener noreferrer">
+            Ver sorteo de amigo secreto ↗
         </a>
     </section>
 
     <!-- ===== APARTADO 3 ===== -->
     <section class="apartado">
         <h2>03. Carta navideña</h2>
+
         <p>
             Creamos una carta navideña utilizando HTML mediante
             un sorteo. Aprendimos a incorporar elementos temáticos
             y creativos a nuestras páginas web.
         </p>
+
         <div class="imagenes">
-            <img src="adrian1.png" alt="Carta navideña, primera imagen" loading="lazy">
-            <img src="adrian2.png" alt="Carta navideña, segunda imagen" loading="lazy">
+            <img src="adrian1.png"
+                 alt="Carta navideña, primera imagen"
+                 loading="lazy">
+
+            <img src="adrian2.png"
+                 alt="Carta navideña, segunda imagen"
+                 loading="lazy">
         </div>
+
         <div class="video-contenedor">
-            <video controls preload="metadata" playsinline aria-label="Video de la carta navideña">
+            <video controls preload="metadata" playsinline
+                   aria-label="Video de la carta navideña">
                 <source src="adrian.mp4" type="video/mp4">
                 Tu navegador no soporta la reproducción de video.
             </video>
@@ -514,41 +610,58 @@ footer p {
     <!-- ===== APARTADO 4 ===== -->
     <section class="apartado">
         <h2>04. Carta de Navidad 2</h2>
+
         <p>
             Las cartas navideñas nos permitieron explorar nuevas
             posibilidades para nuestras páginas web y convivir
             con nuestros compañeros mediante la actividad del
             amigo secreto.
         </p>
+
         <div class="imagenes">
-            <img src="luis1.jpg" alt="Segunda carta navideña, primera imagen" loading="lazy">
-            <img src="luis2.jpg" alt="Segunda carta navideña, segunda imagen" loading="lazy">
+            <img src="luis1.jpg"
+                 alt="Segunda carta navideña, primera imagen"
+                 loading="lazy">
+
+            <img src="luis2.jpg"
+                 alt="Segunda carta navideña, segunda imagen"
+                 loading="lazy">
         </div>
     </section>
 
     <!-- ===== APARTADO 5 ===== -->
     <section class="apartado">
         <h2>05. App de App Inventor</h2>
+
         <p>
             Desarrollamos un videojuego de carreras en el que
             competimos contra un oponente controlado por un robot.
             El objetivo es avanzar por la pista y superar al rival.
         </p>
+
         <div class="imagenes">
-            <img src="carrera.jpg" alt="Captura del videojuego de carreras" loading="lazy">
+            <img src="carrera.jpg"
+                 alt="Captura del videojuego de carreras"
+                 loading="lazy">
         </div>
+
         <div class="video-contenedor">
-            <video controls preload="metadata" playsinline aria-label="Video del videojuego de carreras">
+            <video controls preload="metadata" playsinline
+                   aria-label="Video del videojuego de carreras">
                 <source src="carrera.mp4" type="video/mp4">
                 Tu navegador no soporta la reproducción de video.
             </video>
         </div>
-        <a class="boton-enlace" href="carreras.apk" download>Descargar APK ↓</a>
+
+        <a class="boton-enlace" href="carreras.apk" download>
+            Descargar APK ↓
+        </a>
     </section>
 
     <!-- ===== APARTADO 6 ===== -->
     <section class="apartado">
         <h2>06. Mis aprendizajes de M4S1</h2>
+
         <p>
             En esta sección presento dos videos en los que comparto
             mis aprendizajes, actividades y experiencias durante
@@ -558,9 +671,15 @@ footer p {
         </p>
 
         <div class="multimedia-grid">
+
             <div class="multimedia-tarjeta">
                 <h3>🎬 Video 1. Mis aprendizajes</h3>
-                <p>Resumen de los conocimientos adquiridos durante los tres parciales.</p>
+
+                <p>
+                    Resumen de los conocimientos adquiridos durante
+                    los tres parciales.
+                </p>
+
                 <div class="video-contenedor">
                     <video controls preload="metadata" playsinline
                            aria-label="Primer video de mis aprendizajes de M4S1">
@@ -572,7 +691,12 @@ footer p {
 
             <div class="multimedia-tarjeta">
                 <h3>🎬 Video 2. Mi experiencia</h3>
-                <p>Presentación de mis trabajos, experiencias y aprendizajes de M4S1.</p>
+
+                <p>
+                    Presentación de mis trabajos, experiencias y
+                    aprendizajes de M4S1.
+                </p>
+
                 <div class="video-contenedor">
                     <video controls preload="metadata" playsinline
                            aria-label="Segundo video de mis aprendizajes de M4S1">
@@ -581,12 +705,14 @@ footer p {
                     </video>
                 </div>
             </div>
+
         </div>
     </section>
 
     <!-- ===== APARTADO 7 ===== -->
     <section class="apartado">
         <h2>07. Proyecto transversal de Inglés: Christmas Carol</h2>
+
         <p>
             Este proyecto transversal consiste en presentar un
             villancico navideño en inglés. Con esta actividad
@@ -595,9 +721,14 @@ footer p {
         </p>
 
         <div class="multimedia-grid">
+
             <div class="multimedia-tarjeta">
                 <h3>🎬 Video del villancico</h3>
-                <p>Presentación de nuestro villancico navideño en inglés.</p>
+
+                <p>
+                    Presentación de nuestro villancico navideño en inglés.
+                </p>
+
                 <div class="video-contenedor">
                     <video controls preload="metadata" playsinline
                            aria-label="Video del villancico navideño en inglés">
@@ -609,87 +740,188 @@ footer p {
 
             <div class="multimedia-tarjeta">
                 <h3>🖼️ Imagen del proyecto</h3>
-                <p>Imagen representativa de nuestro proyecto transversal navideño.</p>
+
+                <p>
+                    Imagen representativa de nuestro proyecto
+                    transversal navideño.
+                </p>
+
                 <div class="imagen-proyecto">
                     <img src="trans.jpg"
                          alt="Imagen del proyecto transversal de Inglés: villancico navideño"
                          loading="lazy">
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- ===== APARTADO 8: JARDINES POLINIZADORES ===== -->
-    <section class="apartado jardin-destacado">
-        <h2>08. Proyecto de Jardines Polinizadores 🌺</h2>
+<!-- ===== APARTADO 8: JARDINES POLINIZADORES ===== -->
+<section class="apartado jardin-destacado" id="jardines">
+    <h2>08. Jardines polinizadores</h2>
+
+    <h3 class="titulo-neon">
+        🌱 Un proyecto para cuidar el medio ambiente
+    </h3>
+
+    <p>
+        En este proyecto aprendí a utilizar la programación para presentar
+        una propuesta sobre la importancia de plantar jardines polinizadores.
+        Estos jardines pueden incluir plantas como bugambilias y lantanas,
+        que ayudan a atraer a los polinizadores y contribuyen al cuidado
+        del medio ambiente.
+    </p>
+
+    <p>
+        Esta actividad me permitió relacionar la tecnología con la naturaleza
+        y comprender cómo una página web puede servir para compartir
+        información y promover proyectos ambientales.
+    </p>
+
+    <a class="boton-enlace"
+       href="https://vcruz9997-del.github.io/Jardines-polizadores-/"
+       target="_blank"
+       rel="noopener noreferrer">
+        🌿 Ver proyecto de jardines polinizadores ↗
+    </a>
+
+    <div class="video-contenedor">
+        <video controls preload="metadata" playsinline
+               aria-label="Video del proyecto de jardines polinizadores">
+            <source src="jardines.mp4" type="video/mp4">
+            Tu navegador no admite la reproducción de video.
+        </video>
+    </div>
+</section>
+
+
+<!-- ===== APARTADO 9: NOTICIAS DE TECNOLOGÍA ===== -->
+<section class="apartado" id="noticias">
+    <h2>09. Noticias importantes de tecnología</h2>
+
+    <div class="noticia-tarjeta">
+        <h3 class="titulo-neon">
+            1. CrowdStrike y la ciberseguridad
+        </h3>
 
         <p>
-            En este proyecto aprendí la importancia de crear jardines
-            que ayuden a los polinizadores, como las abejas y las
-            mariposas. Conocí plantas como las bugambilias y las
-            lantanas, que pueden contribuir a atraer polinizadores
-            y favorecer la biodiversidad.
+            Se ha informado sobre una posible operación relacionada con
+            CrowdStrike y Zscaler, enfocada en combinar tecnologías de
+            seguridad para dispositivos y redes.
         </p>
 
         <p>
-            Además, aprendí cómo utilizar la programación y el
-            desarrollo web para presentar un proyecto de manera
-            organizada, creativa e interactiva. Al crear una página
-            web pude compartir información sobre la siembra de plantas
-            para polinizadores, explicar su importancia y promover
-            el cuidado del medio ambiente.
+            <strong>¿Por qué es importante?</strong>
+            La ciberseguridad es fundamental para proteger la información
+            personal y empresarial frente a los ataques informáticos.
+            Por eso, las empresas desarrollan herramientas para mejorar
+            la protección digital.
+        </p>
+    </div>
+
+    <div class="separador-neon"></div>
+
+    <div class="noticia-tarjeta">
+        <h3 class="titulo-neon">
+            2. Amazon y la inteligencia artificial
+        </h3>
+
+        <p>
+            Se ha reportado una colaboración relacionada con tecnología
+            para optimizar sistemas de inteligencia artificial y mejorar
+            su velocidad y eficiencia.
         </p>
 
         <p>
-            Este trabajo me ayudó a comprender que la tecnología no
-            solo sirve para crear aplicaciones, sino también para
-            comunicar ideas, informar a otras personas y fomentar
-            acciones positivas para nuestro entorno.
+            <strong>¿Por qué es interesante?</strong>
+            Estos avances pueden ayudar a que las herramientas de inteligencia
+            artificial utilicen mejor los recursos computacionales y
+            respondan de manera más eficiente.
+        </p>
+    </div>
+
+    <div class="separador-neon"></div>
+
+    <div class="noticia-tarjeta">
+        <h3 class="titulo-neon">
+            3. Robots humanoides en la exploración espacial
+        </h3>
+
+        <p>
+            Se ha mencionado el envío del robot experimental humanoide
+            Teledroid en una misión relacionada con la estación espacial.
+            Este tipo de tecnología busca investigar cómo los robots podrían
+            apoyar a los astronautas en determinadas tareas.
         </p>
 
-        <a class="boton-enlace"
-           href="https://vcruz9997-del.github.io/Jardines-polizadores-/"
-           target="_blank"
-           rel="noopener noreferrer">
-            🌱 Visitar mi proyecto de Jardines Polinizadores ↗
-        </a>
-    </section>
+        <p>
+            <strong>¿Por qué es interesante?</strong>
+            La combinación de robótica y exploración espacial permite
+            desarrollar nuevas tecnologías para realizar tareas complejas
+            y apoyar las investigaciones científicas.
+        </p>
+    </div>
+
+    <p class="nota-neon">
+        <em>
+            Nota: antes de publicar estas noticias, verifica los datos,
+            las fechas y los anuncios en fuentes confiables.
+        </em>
+    </p>
+</section>
+
+
+<!-- ===== APARTADO 10: ACTIVIDAD ESCOLAR CON DRONES ===== -->
+<section class="apartado" id="drones">
+    <h2>10. Actividad escolar con drones</h2>
+
+    <h3 class="titulo-neon">
+        🚁 Aprendiendo con nuevas tecnologías
+    </h3>
+
+    <p>
+        Durante esta actividad conocimos algunas aplicaciones de los
+        drones y su relación con la tecnología. Esta experiencia nos
+        permitió observar cómo estos dispositivos pueden utilizarse
+        en distintas actividades y comprender mejor su funcionamiento.
+    </p>
+
+    <p>
+        También aprendimos la importancia del trabajo en equipo,
+        la exploración tecnológica y el uso responsable de estas
+        herramientas.
+    </p>
+
+    <h3 class="titulo-neon">🎬 Video de la actividad</h3>
+
+    <div class="video-contenedor">
+        <video controls preload="metadata" playsinline
+               aria-label="Video de la actividad escolar con drones">
+            <source src="drones.mp4" type="video/mp4">
+            Tu navegador no admite la reproducción de video.
+        </video>
+    </div>
+
+    <h3 class="titulo-neon">📸 Fotografía del equipo</h3>
+
+    <div class="imagen-proyecto">
+        <img
+            src="grupo-drones.jpg"
+            alt="Fotografía del grupo que participó en la actividad con drones"
+            loading="lazy"
+        >
+    </div>
+</section>
 
 </main>
 
+<!-- ===== PIE DE PÁGINA ===== -->
 <footer>
-    <h3>FIN DE LA INFORMACIÓN</h3>
-    <p>
-        Portafolio digital elaborado con HTML y CSS.
-        <br>
-        M4S1 · Desarrollo de Aplicaciones Web.
-        <br>
-        Aprendizajes del tercer parcial, proyecto transversal de Inglés
-        y proyecto de Jardines Polinizadores.
-    </p>
+    <h3>PORTAFOLIO DIGITAL · M4S1</h3>
+
+    <p>© 2026 | Portafolio de evidencias M4S1</p>
+    <p>Desarrollo de Aplicaciones Web</p>
 </footer>
-
-<script>
-(() => {
-    const lapiz = document.getElementById("lapiz");
-
-    if (!lapiz) return;
-
-    function moverLapiz(e) {
-        lapiz.style.left = e.clientX + "px";
-        lapiz.style.top = e.clientY + "px";
-        lapiz.style.display = "block";
-    }
-
-    document.addEventListener("pointermove", moverLapiz, {
-        passive: true
-    });
-
-    document.addEventListener("pointerdown", moverLapiz, {
-        passive: true
-    });
-})();
-</script>
 
 </body>
 </html>
