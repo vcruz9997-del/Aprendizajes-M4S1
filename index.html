@@ -1,12 +1,12 @@
 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <meta name="theme-color" content="#080f20">
-<meta name="description" content="Portafolio digital de mis aprendizajes de M4S1 y mi proyecto transversal de Inglés.">
+<meta name="description" content="Portafolio digital de mis aprendizajes de M4S1, Desarrollo de Aplicaciones Web, proyecto transversal de Inglés y jardines polinizadores.">
 
 <title>M4S1 | Mi portafolio digital</title>
 
@@ -20,9 +20,7 @@
     --texto-secundario: #a9bdd7;
 }
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html {
     scroll-behavior: smooth;
@@ -86,13 +84,24 @@ header .etiqueta {
 
 header h1 {
     position: relative;
-    margin: 0 0 12px;
+    margin: 0 0 8px;
     font-size: clamp(42px, 7vw, 66px);
     font-weight: 800;
     letter-spacing: 5px;
     color: #fff;
     text-shadow: 0 0 5px #fff, 0 0 10px #67e8f9,
         0 0 20px #22d3ee, 0 0 40px #0891b2, 0 0 70px #0284c7;
+}
+
+/* NUEVO: SUBTÍTULO */
+.subtitulo {
+    position: relative;
+    margin: 0;
+    color: #a5f3fc;
+    font-size: clamp(16px, 3vw, 22px);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px #22d3ee, 0 0 16px #0891b2;
 }
 
 .linea-decorativa {
@@ -301,6 +310,24 @@ a:focus-visible {
     outline-offset: 4px;
 }
 
+/* ===== NUEVO: JARDÍN POLINIZADOR ===== */
+.jardin-destacado {
+    border-color: rgba(103,232,249,.5);
+    background:
+        radial-gradient(ellipse at top right,
+            rgba(34,211,238,.09), transparent 55%),
+        linear-gradient(135deg,
+            rgba(255,255,255,.055), rgba(255,255,255,.018));
+}
+
+.jardin-destacado h2 {
+    text-shadow: 0 0 7px #22d3ee, 0 0 17px #0891b2;
+}
+
+.jardin-destacado .boton-enlace {
+    margin-top: 20px;
+}
+
 /* ===== PIE DE PÁGINA ===== */
 footer {
     max-width: 1150px;
@@ -361,6 +388,7 @@ footer p {
 
     header h1 { letter-spacing: 3px; }
     header .descripcion { font-size: 15px; }
+    .subtitulo { line-height: 1.5; }
 
     .apartado {
         padding: 21px 16px;
@@ -383,7 +411,6 @@ footer p {
 
     .imagenes img { max-height: 70vh; }
     .video-contenedor { max-width: 100%; margin-top: 24px; }
-
     .boton-enlace { padding: 13px 19px; }
 
     footer {
@@ -417,7 +444,12 @@ footer p {
 <header>
     <p class="etiqueta">PORTAFOLIO DIGITAL · TERCER PARCIAL</p>
     <h1>M4S1</h1>
+
+    <!-- NUEVO SUBTÍTULO -->
+    <p class="subtitulo">Desarrollo de Aplicaciones Web</p>
+
     <div class="linea-decorativa"></div>
+
     <p class="descripcion">
         Mi página web de todos mis aprendizajes del tercer parcial.
         Un recorrido por mis proyectos, prácticas y experiencias.
@@ -514,10 +546,9 @@ footer p {
         <a class="boton-enlace" href="carreras.apk" download>Descargar APK ↓</a>
     </section>
 
-    <!-- ===== APARTADO 6: APRENDIZAJES M4S1 ===== -->
+    <!-- ===== APARTADO 6 ===== -->
     <section class="apartado">
         <h2>06. Mis aprendizajes de M4S1</h2>
-
         <p>
             En esta sección presento dos videos en los que comparto
             mis aprendizajes, actividades y experiencias durante
@@ -527,11 +558,9 @@ footer p {
         </p>
 
         <div class="multimedia-grid">
-
             <div class="multimedia-tarjeta">
                 <h3>🎬 Video 1. Mis aprendizajes</h3>
                 <p>Resumen de los conocimientos adquiridos durante los tres parciales.</p>
-
                 <div class="video-contenedor">
                     <video controls preload="metadata" playsinline
                            aria-label="Primer video de mis aprendizajes de M4S1">
@@ -544,7 +573,6 @@ footer p {
             <div class="multimedia-tarjeta">
                 <h3>🎬 Video 2. Mi experiencia</h3>
                 <p>Presentación de mis trabajos, experiencias y aprendizajes de M4S1.</p>
-
                 <div class="video-contenedor">
                     <video controls preload="metadata" playsinline
                            aria-label="Segundo video de mis aprendizajes de M4S1">
@@ -553,14 +581,12 @@ footer p {
                     </video>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- ===== APARTADO 7: VILLANCICO EN INGLÉS ===== -->
+    <!-- ===== APARTADO 7 ===== -->
     <section class="apartado">
         <h2>07. Proyecto transversal de Inglés: Christmas Carol</h2>
-
         <p>
             Este proyecto transversal consiste en presentar un
             villancico navideño en inglés. Con esta actividad
@@ -569,11 +595,9 @@ footer p {
         </p>
 
         <div class="multimedia-grid">
-
             <div class="multimedia-tarjeta">
                 <h3>🎬 Video del villancico</h3>
                 <p>Presentación de nuestro villancico navideño en inglés.</p>
-
                 <div class="video-contenedor">
                     <video controls preload="metadata" playsinline
                            aria-label="Video del villancico navideño en inglés">
@@ -586,15 +610,49 @@ footer p {
             <div class="multimedia-tarjeta">
                 <h3>🖼️ Imagen del proyecto</h3>
                 <p>Imagen representativa de nuestro proyecto transversal navideño.</p>
-
                 <div class="imagen-proyecto">
                     <img src="trans.jpg"
                          alt="Imagen del proyecto transversal de Inglés: villancico navideño"
                          loading="lazy">
                 </div>
             </div>
-
         </div>
+    </section>
+
+    <!-- ===== APARTADO 8: JARDINES POLINIZADORES ===== -->
+    <section class="apartado jardin-destacado">
+        <h2>08. Proyecto de Jardines Polinizadores 🌺</h2>
+
+        <p>
+            En este proyecto aprendí la importancia de crear jardines
+            que ayuden a los polinizadores, como las abejas y las
+            mariposas. Conocí plantas como las bugambilias y las
+            lantanas, que pueden contribuir a atraer polinizadores
+            y favorecer la biodiversidad.
+        </p>
+
+        <p>
+            Además, aprendí cómo utilizar la programación y el
+            desarrollo web para presentar un proyecto de manera
+            organizada, creativa e interactiva. Al crear una página
+            web pude compartir información sobre la siembra de plantas
+            para polinizadores, explicar su importancia y promover
+            el cuidado del medio ambiente.
+        </p>
+
+        <p>
+            Este trabajo me ayudó a comprender que la tecnología no
+            solo sirve para crear aplicaciones, sino también para
+            comunicar ideas, informar a otras personas y fomentar
+            acciones positivas para nuestro entorno.
+        </p>
+
+        <a class="boton-enlace"
+           href="https://vcruz9997-del.github.io/Jardines-polizadores-/"
+           target="_blank"
+           rel="noopener noreferrer">
+            🌱 Visitar mi proyecto de Jardines Polinizadores ↗
+        </a>
     </section>
 
 </main>
@@ -604,7 +662,10 @@ footer p {
     <p>
         Portafolio digital elaborado con HTML y CSS.
         <br>
-        M4S1 · Aprendizajes del tercer parcial y proyecto transversal de Inglés.
+        M4S1 · Desarrollo de Aplicaciones Web.
+        <br>
+        Aprendizajes del tercer parcial, proyecto transversal de Inglés
+        y proyecto de Jardines Polinizadores.
     </p>
 </footer>
 
@@ -632,6 +693,3 @@ footer p {
 
 </body>
 </html>
-
-
-
